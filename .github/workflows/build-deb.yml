@@ -1,4 +1,3 @@
-
 name: Build Deb Package
 
 # yamllint disable-line rule:truthy
@@ -23,3 +22,7 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         with:
           files: homeassistant-supervised.deb
+      - name: Download Artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: homeassistant-supervised.deb
