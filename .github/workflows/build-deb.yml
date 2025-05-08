@@ -23,6 +23,6 @@ jobs:
         with:
           files: homeassistant-supervised.deb
       - name: Download Artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: homeassistant-supervised.deb
